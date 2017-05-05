@@ -6,25 +6,34 @@ angular.module('starter.services', [])
   var events = [{
     id: 1,
     titre: 'Pas cours de la journée',
-    date: '05/05/17',
+    date: '04/05/17',
     heure: '08h12',
-    emotion: 'Content',
+    emotion: [
+        { "value": "Joie", "intense": "90" }
+    ],
     ressenti: 'Ceci est un test'
   },
   {
     id: 2,
-    titre: 'Conduite',
-    date: '05/05/17',
+    titre: 'Araignée',
+    date: '04/05/17',
     heure: '17h00',
-    emotion: 'Stressé',
-    ressenti: 'Premières heures de conduite, stress'
+    emotion: [
+        { "value": "Peur", "intense": "70" },
+        { "value": "Dégout", "intense": "50" }
+    ],
+    ressenti: 'Découverte d\'une araignée sur le chemin, beurk'
   },
   {
     id: 3,
     titre: 'Développement d\'application',
-    date: '06/05/17',
+    date: '05/05/17',
     heure: '00h45',
-    emotion: 'Fatigué',
+    emotion: [
+        { "value": "Joie", "intense": "40" },
+        { "value": "Colère", "intense": "30" },
+        { "value": "Tristesse", "intense": "20" }
+    ],
     ressenti: 'Développement du projet innovant'
   }];
 
@@ -47,7 +56,10 @@ angular.module('starter.services', [])
     //AJOUT
     create: function(data){
       var id = events.length + 1;
-      events[id] = data;
+      //events[id] = data;
+      data.id = id;
+      events.push(data);
+
     },
     update : function(id, data){
       events[id] = data;

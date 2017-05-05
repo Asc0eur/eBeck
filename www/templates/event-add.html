@@ -1,5 +1,28 @@
 <ion-view view-title="Saisie d'un nouvel évènement">
   <ion-content class="padding">
-    <p>Un formulaire va se placer ici</p>
+
+	<div ng-controller="EventAddCtrl" class="ajoutEv">
+	  <form class="css-form">
+	    <label>Titre<input type="text" ng-model="event.titre" required /></label><br/>
+	    <label>Date<input type="text" ng-model="event.date" required /></label><br/>
+	    <label>Heure<input type="text" ng-model="event.heure" /></label><br/>
+
+		<label>Emotion </label>
+        <select name="emotion" ng-model="event.emotion" required>
+            <option value="Peur">Peur</option>
+            <option value="Joie">Joie</option>
+            <option value="Colere">Colère</option>
+            <option value="Tristesse">Tristesse</option>
+            <option value="Degout">Dégout</option>
+        </select><br/><br/>
+        <label>Intensité : 0% <input type="range" value="50" max="100" min="0" step="10" ng-model="event.intense"> 100%</label>
+        <br/>{{event.intense}} %<br/>
+
+	    <label>Ressenti<input type="text" ng-model="event.ressenti" required /></label><br/>
+
+	    <input type="submit" ng-click="create()" value="OK" />
+	  </form>
+	</div>
+
   </ion-content>
 </ion-view>

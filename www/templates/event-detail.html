@@ -6,14 +6,26 @@
 -->
 <ion-view view-title="Evénement n°{{event.id}} : {{event.date}}">
   <ion-content class="padding">
+  <div class = "evenement">
+    <h4>
+      Evénement du <strong>{{event.date}}</strong> à <strong>{{event.heure}}</strong>
+    </h4></br>
+    
+    <p><strong>Nom de l'évènement</strong></p>
+    <p>{{event.titre}}</p></br>
+
+    <p><strong>Émotions ressenties </strong>
+      <ul>
+        <li ng-repeat="emotion in event.emotion track by $index">
+          {{emotion.value || event.emotion}} à {{emotion.intense || event.intense}}%
+        </li>
+      </ul>
+    </p></br>
+    
     <p>
-      Evénement du {{event.date}} à {{event.heure}}
+      <strong>Description de l'évènement</strong> 
+      <p>{{event.ressenti}}</p>
     </p>
-    <p>
-      Les émotions ressenties étaient : {{event.emotion}}
-    </p>
-    <p>
-      Le ressenti global était : {{event.ressenti}}
-    </p>
+  </div>
   </ion-content>
 </ion-view>

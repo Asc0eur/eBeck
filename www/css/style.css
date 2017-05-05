@@ -21,3 +21,22 @@ img {
 	max-width: 100%;
 	padding-top: 20px;
 }
+
+.evenement{
+	margin-right: 10px;
+	margin-left : 10px;
+	text-align: center;
+}
+
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.css-form input{
+	border: 1px solid;
+	margin:auto;
+}
+
+.ajoutEv{
+	text-align: center;
+}
