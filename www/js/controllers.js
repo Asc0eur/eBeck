@@ -23,6 +23,19 @@ angular.module('starter.controllers', [])
 
 //AJOUT
 
+.controller('EventAddCtrl', function($scope){})
 .controller('StatsCtrl', function($scope){})
-.controller('ParamCtrl', function($scope){})
-.controller('HelpCtrl', function($scope){});
+.controller('ParamCtrl', function($scope){
+  $scope.toggleModel = {
+    rotation : true
+  };
+})
+.controller('HelpCtrl', function($scope, Helps){
+  $scope.helps = Helps.all();
+  $scope.remove = function(help) {
+    Helps.remove(help);
+  };
+})
+.controller('HelpDetailCtrl', function($scope, $stateParams, Helps) {
+  $scope.help = Helps.get($stateParams.helpId);
+});

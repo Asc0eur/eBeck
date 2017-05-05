@@ -1,4 +1,15 @@
 <ion-view view-title="Aides et Tutoriel">
   <ion-content>
+   <ion-list id = "menuPri">
+
+      <ion-item class="item-icon-left" type="item-text-wrap" href="#/tab/menu">
+        <h2>Relancer le tutoriel</h2>
+      </ion-item>
+
+      <ion-item class="item-icon-left" ng-repeat="help in helps" type="item-text-wrap" href="#/tab/help/{{help.id}}">
+        <h2>{{help.titre}}</h2>
+      </ion-item>
+
+    </ion-list>
   </ion-content>
 </ion-view>

@@ -70,6 +70,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
 //AJOUT
+.state('tab.event-add', {
+    url: '/events/add',
+    views: {
+      'tab-events': {
+        templateUrl: 'templates/event-add.html',
+        controller: 'EventAddCtrl'
+      }
+    }
+  })
+
   .state('tab.stats', {
     url: '/stats',
     views: {
@@ -96,6 +106,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-help': {
         templateUrl: 'templates/tab-help.html',
         controller: 'HelpCtrl'
+      }
+    }
+  })
+
+  .state('tab.help-detail', {
+    url: '/help/:helpId',
+    views: {
+      'tab-help': {
+        templateUrl: 'templates/help-detail.html',
+        controller: 'HelpDetailCtrl'
       }
     }
   });

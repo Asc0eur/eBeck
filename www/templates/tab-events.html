@@ -1,13 +1,18 @@
 <ion-view view-title="Mes évènements">
   <ion-content>
     <ion-list id="menuPri">
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="event in events" type="item-text-wrap" href="#/tab/events/{{event.id}}">
+      
+      <ion-item class="item-icon-left" type="item-text-wrap" href="#/tab/events/add">
+        <h2>Saisir un nouvel évènement</h2>
+      </ion-item>
+
+      <ion-item class="item-remove-animate item-avatar item-icon-left" ng-repeat="event in events" type="item-text-wrap" href="#/tab/events/{{event.id}}">
         <h2>Evénement n°{{event.id}} : {{event.date}}</h2>
-        <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(event)">
           Delete
         </ion-option-button>
+        
       </ion-item>
     </ion-list>
   </ion-content>
