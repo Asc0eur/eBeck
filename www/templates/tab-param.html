@@ -3,11 +3,21 @@
   	<ion-list>
 
   		<ion-item>
-  			<p>Changement taille de police de caractère</p>
+  			Taille police
+        <select name="taille" ng-model="taille">
+            <option value="12" selected="selected">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+        </select>
   		</ion-item>
 
   		<ion-item>
-  			<p>Changement police de caractère</p>
+  			Police 
+        <select name="police" ng-model="police">
+            <option value="Arial" selected = "selected">Arial</option>
+            <option value="Joie">Comic sans MS</option>
+            <option value="Colere">Time New Roman </option>
+        </select>
   		</ion-item>
 
 		<ion-toggle ng-model = "toggleModel.rotation">Rotation automatique</ion-toggle>
