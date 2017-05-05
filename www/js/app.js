@@ -40,46 +40,67 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.menu', {
+    url: '/menu',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-menu': {
+        templateUrl: 'templates/tab-menu.html',
+        controller: 'MenuCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.events', {
+      url: '/events',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-events': {
+          templateUrl: 'templates/tab-events.html',
+          controller: 'EventsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.event-detail', {
+      url: '/events/:eventId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-events': {
+          templateUrl: 'templates/event-detail.html',
+          controller: 'EventDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+//AJOUT
+  .state('tab.stats', {
+    url: '/stats',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-stats': {
+        templateUrl: 'templates/tab-stats.html',
+        controller: 'StatsCtrl'
+      }
+    }
+  })
+
+  .state('tab.param', {
+    url: '/param',
+    views: {
+      'tab-param': {
+        templateUrl: 'templates/tab-param.html',
+        controller: 'ParamCtrl'
+      }
+    }
+  })
+
+  .state('tab.help', {
+    url: '/help',
+    views: {
+      'tab-help': {
+        templateUrl: 'templates/tab-help.html',
+        controller: 'HelpCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/menu');
 
 });

@@ -3,21 +3,31 @@ Create tabs with an icon and label, using the tabs-positive style.
 Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
-<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+<ion-tabs class="tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
+  <!-- Menu Tab -->
+  <ion-tab title="Menu" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/menu">
+    <ion-nav-view name="tab-menu"></ion-nav-view>
   </ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
+  <!-- Colonnes de Beck Tab -->
+  <ion-tab title="Beck" icon-off="ion-ios-bookmarks-outline" icon-on="ion-ios-bookmarks" href="#/tab/events">
+    <ion-nav-view name="tab-events"></ion-nav-view>
   </ion-tab>
 
-  <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
+  <!-- Statistiques Tab -->
+  <ion-tab title="Stats" icon-off="ion-ios-pie-outline" icon-on="ion-ios-pie" href="#/tab/stats">
+    <ion-nav-view name="tab-stats"></ion-nav-view>
+  </ion-tab>
+
+ <!-- Aide Tab -->
+  <ion-tab title="Aide" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" href="#/tab/help">
+    <ion-nav-view name="tab-help"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Parametres Tab -->
+  <ion-tab title="Param" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/param">
+    <ion-nav-view name="tab-param"></ion-nav-view>
   </ion-tab>
 
 

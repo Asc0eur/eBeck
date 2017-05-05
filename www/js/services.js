@@ -1,47 +1,44 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
+.factory('Events', function() {
 
-  // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
+  //Fausses donnees pour tester
+  var events = [{
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
+    titre: 'Pas cours de la journée',
+    date: '05/05/17',
+    heure: '08h12',
+    emotion: 'Content',
+    ressenti: 'Ceci est un test'
+  },
+  {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
+    titre: 'Conduite',
+    date: '05/05/17',
+    heure: '17h00',
+    emotion: 'Stressé',
+    ressenti: 'Premières heures de conduite, stress'
+  },
+  {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    titre: 'Développement d\'application',
+    date: '06/05/17',
+    heure: '00h45',
+    emotion: 'Fatigué',
+    ressenti: 'Développement du projet innovant'
   }];
 
   return {
     all: function() {
-      return chats;
+      return events;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(event) {
+      events.splice(events.indexOf(event), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(eventId) {
+      for (var i = 0; i < events.length; i++) {
+        if (events[i].id === parseInt(eventId)) {
+          return events[i];
         }
       }
       return null;

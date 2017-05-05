@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+
+#menuPri{
+	text-align: center;
+}
+
+#menuPri h2{
+	padding-top: 10px;
+	font-weight: bold;
+}
